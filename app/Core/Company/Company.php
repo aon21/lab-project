@@ -9,10 +9,10 @@ class Company extends AbstractCompany
     public function getDetails(): array
     {
         return [
-            'name'    => $this->getName(),
-            'address' => $this->getAddress(),
-            'phone'   => $this->getPhone(),
-            'email'   => $this->getEmail()
+            'name'    => $this->name,
+            'address' => $this->address,
+            'phone'   => $this->phone,
+            'email'   => $this->email
         ];
     }
 }
