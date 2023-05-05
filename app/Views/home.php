@@ -11,9 +11,9 @@ $companyDetails = new Company(
 );
 
 $client = new Customer(
-    'John Doe',
-    'johndoe@example.com',
-    $companyDetails
+    name: 'John Doe',
+    email: 'johndoe@example.com',
+    companyDetails: $companyDetails
 );
 
 print_r($client);
