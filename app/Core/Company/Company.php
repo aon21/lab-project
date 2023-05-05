@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Core\Company;
+declare(strict_types=1);
 
-use App\Core\Company\AbstractCompany;
+namespace App\Core\Company;
 
 class Company extends AbstractCompany
 {

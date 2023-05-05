@@ -1,9 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Core\Client;
 
 use App\Core\Company\AbstractCompany;
-use App\Core\Company\Company;
 
 class Client
 {
@@ -11,7 +12,7 @@ class Client
     protected string $email;
     protected ?AbstractCompany $companyDetails = null;
 
-    public function __construct($name, $email)
+    public function __construct(string $name, string $email)
     {
         $this->name = $name;
         $this->email = $email;

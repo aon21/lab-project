@@ -11,22 +11,22 @@ abstract class AbstractCompany
     protected string $phone;
     protected string $email;
 
-    public function setName($name): void
+    public function setName(string $name): void
     {
         $this->name = $name;
     }
 
-    public function setAddress($address): void
+    public function setAddress(string $address): void
     {
         $this->address = $address;
     }
 
-    public function setPhone($phone): void
+    public function setPhone(string $phone): void
     {
         $this->phone = $phone;
     }
 
-    public function setEmail($email): void
+    public function setEmail(string $email): void
     {
         $this->email = $email;
     }

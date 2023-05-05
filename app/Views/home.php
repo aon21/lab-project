@@ -12,7 +12,6 @@ $companyDetails->setEmail('test@test.com');
 
 $client = new Client("John Doe", "johndoe@example.com");
 
-$client = new Client("John Doe", "johndoe@example.com");
 $client->setCompanyDetails($companyDetails);
 
 print_r($client->getCompanyDetails());
