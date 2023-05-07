@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Core\Company;
 
-abstract class AbstractCompany
+abstract class AbstractCompany implements CompanyDetailsInterface
 {
     public function __construct(
         protected string $name,
@@ -13,5 +13,13 @@ abstract class AbstractCompany
         protected string $email,
     ){}
 
-    abstract public function getDetails(): array;
+    public function getDetails(): array
+    {
+        return [
+            'name'    => $this->name,
+            'address' => $this->address,
+            'phone'   => $this->phone,
+            'email'   => $this->email
+        ];
+    }
 }
