@@ -6,14 +6,14 @@ Learning material
     ├── app
     │   ├── Core
     │   │   ├── Company
-                └── Exceptions
+    │   │   │   └── Exceptions
     │   │   ├── Customer
     │   ├── Controllers (for later usage)
     │   ├── Models (for later usage)
     │   └── Views
     ├── Logs
-        ├── Company
-        ├── Customer
+    │   ├── Company
+    │   ├── Customer
     ├── vendor
     │   └── (Third-party dependencies installed via Composer)
     └── composer.json
