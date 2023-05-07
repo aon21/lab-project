@@ -5,10 +5,15 @@ Learning material
     
     ├── app
     │   ├── Core
-    │   │   └── (Core files)
+    │   │   ├── Company
+                └── Exceptions
+    │   │   ├── Customer
     │   ├── Controllers (for later usage)
     │   ├── Models (for later usage)
     │   └── Views
+    ├── Logs
+        ├── Company
+        ├── Customer
     ├── vendor
     │   └── (Third-party dependencies installed via Composer)
     └── composer.json
