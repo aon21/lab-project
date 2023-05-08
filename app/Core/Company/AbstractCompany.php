@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Core\Company;
 
-abstract class AbstractCompany implements CompanyDetailsInterface
+abstract class AbstractCompany implements DetailsInterface
 {
     public function __construct(
         protected string $name,

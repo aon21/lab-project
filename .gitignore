@@ -1,5 +1,3 @@
 vendor
 .idea
 composer.lock
-Logs/Customer/customer_errors.log
-Logs/Company/company_errors.log

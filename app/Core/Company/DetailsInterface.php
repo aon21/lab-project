@@ -4,6 +4,6 @@ declare(strict_types=1);
 
 namespace App\Core\Company;
 
-interface CompanyDetailsInterface {
+interface DetailsInterface {
     public function getDetails(): array;
 }
