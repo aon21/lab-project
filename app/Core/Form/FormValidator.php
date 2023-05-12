@@ -4,14 +4,14 @@ namespace App\Core\Form;
 
 class FormValidator extends AbstractFormValidator
 {
-    public function validateRequired($field, $value): void
+    public function validateRequired(string $field, string $value): void
     {
         if (empty($value)) {
             $this->addError($field, "$field field is required.");
         }
     }
 
-    public function validateEmail($field, $value): void
+    public function validateEmail(string $field, string $value): void
     {
         if (!filter_var($value, FILTER_VALIDATE_EMAIL)) {
             $this->addError($field, "$field must be a valid email address.");
@@ -23,12 +23,12 @@ class FormValidator extends AbstractFormValidator
         return $this->errors;
     }
 
-    protected function addError($field, $message): void
+    protected function addError(string $field, string $message): void
     {
         $this->errors[$field] = $message;
     }
 
-    public function validateFormFields($formData): array
+    public function validateFormFields(array $formData): array
     {
         if ($formData) {
             foreach ($formData as $key => $val) {

@@ -8,7 +8,7 @@ use App\Core\Company\Exceptions\MissingEmailException;
 use App\Core\Company\Exceptions\MissingNameException;
 use App\Core\Company\Exceptions\MissingPhoneException;
 
-include_once 'partials/head.php';
+include_once 'partials/head.html';
 
 include BASE . '/app/Views/forms/create-customer-form.html';
 

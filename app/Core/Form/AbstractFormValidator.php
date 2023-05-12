@@ -5,7 +5,7 @@ namespace App\Core\Form;
 abstract class AbstractFormValidator {
     protected array $errors = [];
 
-    protected function addError($field, $message): void
+    protected function addError(string $field, string $message): void
     {
         $this->errors[$field] = $message;
     }
@@ -15,5 +15,5 @@ abstract class AbstractFormValidator {
         return $this->errors;
     }
 
-    abstract public function validateFormFields($formData);
+    abstract public function validateFormFields(array $formData);
 }
