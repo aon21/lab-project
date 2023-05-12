@@ -7,10 +7,27 @@ use App\Core\Company\Exceptions\MissingAddressException;
 use App\Core\Company\Exceptions\MissingEmailException;
 use App\Core\Company\Exceptions\MissingNameException;
 use App\Core\Company\Exceptions\MissingPhoneException;
+use Db\Database;
 
 include_once 'partials/head.html';
 
 include BASE . '/app/Views/forms/create-customer-form.html';
+
+$database = new Database();
+$database->connect();
+
+$existingTables = $database->query("SHOW TABLES LIKE 'customers'");
+
+if (!$existingTables) {
+    $sql = 'CREATE TABLE customers (
+            id INT(11) AUTO_INCREMENT PRIMARY KEY,
+            name VARCHAR(255) NOT NULL,
+            email VARCHAR(255) NOT NULL,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )';
+
+    $database->query($sql);
+}
 
 $errors = [];
 
@@ -34,14 +51,23 @@ if (count($errors) > 0) {
 
 } else {
 
-    $customer = new Customer(
-        name: $_POST['name'],
-        email: $_POST['email'],
-        companyDetails: $companyDetails
-    );
+    if ($_POST) {
+        $customer = new Customer(
+            name: filter_var($_POST['name'], FILTER_SANITIZE_STRING),
+            email: filter_var($_POST['email'], FILTER_SANITIZE_EMAIL),
+            companyDetails: $companyDetails
+        );
 
-    echo 'Customer: <pre>';
-    print_r($customer);
+        $database->query("INSERT INTO customers (name, email) VALUES ('{$_POST['name']}', '{$_POST['email']}')");
+
+        $getInsertedResult = $database->query('SELECT * FROM customers');
+
+        echo '<pre>';
+        print_r($getInsertedResult);
+    }
+
+//    echo 'Customer: <pre>';
+//    print_r($customer);
 }
 
 try {

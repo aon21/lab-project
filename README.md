@@ -1,6 +1,10 @@
 ### LAB PHP PROJECT
 Learning material
 
+### INSTALLATION
+1. composer install in root directory
+2. copy example env file by running this command in your terminal - cp .env.example .env (and fill connection data)
+
 ### Project Structure
     
     ├── app
