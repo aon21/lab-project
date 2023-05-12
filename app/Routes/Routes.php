@@ -1,5 +1,5 @@
 <?php
 
 return [
-    ['url' => '/', 'file' => 'home.php']
+    ['url' => '/', 'file' => 'home.php'],
 ];

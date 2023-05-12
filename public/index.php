@@ -1,11 +1,13 @@
 <?php
 
-require_once dirname(__DIR__) . '/lab-project/vendor/autoload.php';
+define('BASE', realpath(__DIR__ . '/../'));
+
+require_once BASE . '/vendor/autoload.php';
 
 use App\Routes\Router;
 
 $router = new Router();
-$routes = require __DIR__ . '/app/Routes/Routes.php';
+$routes = require BASE . '/app/Routes/Routes.php';
 
 if ($routes) {
     foreach ($routes as $route) {

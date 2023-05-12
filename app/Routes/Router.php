@@ -10,7 +10,7 @@ class Router {
 
     public function addRoute(string $url, string $file): void
     {
-        $this->routes[$url] = __DIR__ . '/../Views/' . $file;
+        $this->routes[$url] = BASE . '/app/Views/layouts/' . $file;
     }
 
     public function route(): void
