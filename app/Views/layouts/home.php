@@ -10,7 +10,7 @@ use App\Core\Company\Exceptions\MissingPhoneException;
 
 include_once 'partials/head.php';
 
-include BASE . '/app/Views/forms/create-customer-form.php';
+include BASE . '/app/Views/forms/create-customer-form.html';
 
 $errors = [];
 

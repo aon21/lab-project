@@ -8,9 +8,17 @@ Learning material
     │   │   ├── Company
     │   │   │   └── Exceptions
     │   │   ├── Customer
+    │   │   ├── Form
     │   ├── Controllers (for later usage)
     │   ├── Models (for later usage)
-    │   └── Views
+    │   ├── Views
+    │   │   ├── Forms
+    │   │   └── Layouts
+    │   │       └── Partials
+    ├── public
+    │   └── assets
+    │       └── scripts
+    │       └── styles
     ├── Logs
     │   ├── Company
     │   ├── Customer
